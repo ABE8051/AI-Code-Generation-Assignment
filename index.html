@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zodiac Sign & Birthstone Finder</title>
+</head>
+<body>
+    <h1>Find Your Zodiac Sign and Birthstone</h1>
+    <form method="POST" action="/">
+        <label for="birth_date">Enter your birth date:</label>
+        <input type="date" id="birth_date" name="birth_date" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if sign and birthstone %}
+        <h2>Your Zodiac Sign: {{ sign }}</h2>
+        <h2>Your Birthstone: {{ birthstone }}</h2>
+    {% endif %}
+</body>
+</html>
